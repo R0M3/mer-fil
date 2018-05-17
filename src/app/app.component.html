@@ -1,1 +1,47 @@
+<h2>Why seperating state is useful</h2>
+<p>
+    Seperating state is akin to the seperation of concerns.
+    The seperation of concerns is a design principle for seperating code into 
+    distint sections, so that each section can address a seperate concern.
 
+    This ensures maintainability, flexibility, extensibility and reusability.
+
+    Redux is a great example of this.
+</p>
+
+<h2>Benefits to using ES6 classes</h2>
+<p>
+    People keep saying it's just syntactical sugar, but it's super important sugar:
+</p>
+<ul>
+        <li>Simpler, less error prone syntax</li>
+        <li>More scalable, maintainable, readable code base</li>
+        <li>Much easier to work with inheritance</li>
+    </ul>
+
+<h2>Immutibility</h2>
+<p>
+    Immutibility refers to code that cannot be changed.
+    Mutating data can produce code that’s hard to read and error prone.
+    
+    This is often a problem in objects, as they're passed by reference, meaning
+    it could be easy to accidentily overwrite an object when you think you're making
+    a copy.
+
+    Object.assign or the spread operator from ES6 prevents passing by reference, but
+    using immutable.js or redux helps prevent it happening altogether.
+</p>
+
+<h2>Spread operator</h2>
+<p>
+    The spread operator allows an expression to be expanded in places where multiple
+    elements/variables/arguments are expected.
+
+    Some good use cases of this are: 
+</p>
+<ul>
+        <li>Copying arrays</li>
+        <li>Combining arrays</li>
+        <li>Destructuring objects, for example, into variables</li>
+        <li>Calling functions without using .apply()</li>
+    </ul>

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { PostService, UserService } from './providers';
 import { Observable, combineLatest } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,22 +8,26 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private userPosts: any;
   constructor(
     private postService: PostService,
     private userService: UserService
   ) {
-    this.userPosts = this.getUserPosts();
+    this.getUserPosts();
   }
+
+  // merge and filter of two endpoints here
+  // goal is to map posts to users
   getUserPosts() {
-    let res = [];
-    // this.postService.getPosts().subscribe(res => console.log(res));
     return combineLatest(
       this.postService.getPosts(),
       this.userService.getUsers()
     ).subscribe(([posts, users]) => {
-      var findPosts = id => posts.find(post => post.userId === id);
-      console.log(users.forEach(user => Object.assign(user, findPosts(user.id))));
-    });
-  }
+      let usersPosts = users.map(user => {
+        return Object.assign({}, user, {
+          posts: posts.filter(post => post.userId === user.id)
+        });
+      });
+      console.info("Result of merge and filter:");
+      console.log(usersPosts);
+  })}
 }
