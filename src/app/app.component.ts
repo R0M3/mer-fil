@@ -19,8 +19,7 @@ export class AppComponent {
       {
         title: 'Why seperating state is useful',
         text: 'Seperating state is akin to the seperation of concerns. The seperation of concerns is a design principle for seperating code into distint sections, so that each section can address a seperate concern. This ensures maintainability, flexibility, extensibility and reusability. Redux is a great example of this.',
-        image: '',
-        imageAlt: ''
+        image: '../assets/concerns.jpg'
       },
       {
         title: 'Benefits to using ES6 classes',
@@ -30,14 +29,12 @@ export class AppComponent {
           'More scalable, maintainable, readable code base',
           'Much easier to work with inheritance'
         ],
-        image: '',
-        imageAlt: ''
+        image: '../assets/ES6.png'
       },
       {
         title: 'Immutibility',
         text: 'Immutibility refers to code that cannot be changed. Mutating data can produce code that’s hard to read and error prone. This is often a problem in objects, as they\'re passed by reference, meaning it could be easy to accidentily overwrite an object when you think you\'re making a copy. Object.assign or the spread operator from ES6 prevents passing by reference, but using immutable.js or redux helps prevent it happening altogether.',
-        image: '',
-        imageAlt: ''
+        image: '../assets/immutable.jpeg'
       },
       {
         title: 'Spread operator',
@@ -48,10 +45,9 @@ export class AppComponent {
           'Destructuring objects, for example, into variables',
           'Calling functions without using .apply()'
         ],
-        image: '../assets/spread.png',
-        imageAlt: ''
+        image: '../assets/spread.png'
       }
-    ]
+    ];
   }
 
   // merge and filter of two endpoints here

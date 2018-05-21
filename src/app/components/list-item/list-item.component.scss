@@ -10,8 +10,19 @@
     }
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        .title:after {
+            width: 100%;
+        }
     }
-    &.right {
-        // align right
+    .title {
+        display: inline-block;
+    }
+    .title:after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        display: block;
+        background: black;
+        transition: 300ms;
     }
 }

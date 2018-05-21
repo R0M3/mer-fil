@@ -1,15 +1,15 @@
 <div class='item'>
   <div class="image-contain">
-    <img class='image' [src]='item.image' alt='item.imageAlt' />
+    <img class='image' [src]='item.image' />
   </div>
   <div class="content">
     <h2 class='title'>
       {{ item.title }}
     </h2>
-    <p class='text'>
+    <p>
       {{ item.text }}
     </p>
-    <ul class='list' *ngIf='item.list'>
+    <ul *ngIf='item.list'>
       <li *ngFor='let i of item.list'>
         {{ i }}
       </li>
